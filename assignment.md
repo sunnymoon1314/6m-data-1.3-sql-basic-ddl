@@ -4,6 +4,8 @@ Estimated Time: 45-60 Minutes
 
 **Submission:** Work through the case studies below, then check your answers against the solution key at the bottom. To share your work with peers, post in the **#peer-reviews** Discord channel. For questions, post in **#questions**.
 
+> 💡 Notice the Loans table (in Case Study 1 below) doesn't describe a *thing* — it describes an *event* that connects two things (a member and a book). Tables like this are called 'link' or 'junction' tables, and they hold two foreign keys, one pointing to each side.
+
 ## **Case Study 1: The "Tiny Library" (Schema Design)**
 
 Scenario:
@@ -42,7 +44,7 @@ id,full_name,contact_info,signup_date
 
 **Task:**
 
-1. **Create a Staging Table:** Create a table called marketing\_leads in the public schema. Since the source data is messy, be generous with your data types (use VARCHAR for almost everything to prevent import errors).  
+1. **Create a Staging Table:** Create a table called marketing\_leads in the default (main) schema — no schema prefix needed. Since the source data is messy, be generous with your data types (use VARCHAR for almost everything to prevent import errors).  
 2. **Import Data:** Write the COPY command to load the CSV data into your table.  
 3. **Create a View:** Create a view called valid\_leads that filters out rows where the contact\_info does NOT contain an '@' symbol (excluding phone numbers).
 

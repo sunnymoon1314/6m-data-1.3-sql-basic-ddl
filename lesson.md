@@ -256,17 +256,15 @@ CREATE TABLE lesson.students (
 
 "We have empty tables. Typing `INSERT INTO...` one row at a time is fine for 10 rows. It is impossible for 1 million rows. The **COPY** command is the industrial vacuum cleaner of SQL — it inhales an entire CSV file in seconds."
 
-<details>
-  <summary>What are Indexes?</summary>
+**What are Indexes?**
 
-  Indexes are used to improve the performance of queries. Think of a book's index — instead of reading every page (full table scan), the database jumps directly to the relevant rows. Indexes are created using one or more columns of a database table. Users cannot see the indexes; they are just used to speed up searches/queries.
-</details>
+An index is like the index at the back of a textbook. Without it, finding every mention of 'inflation' means reading all 400 pages one by one (a 'full table scan'). With it, you flip to the index, see 'inflation — p.212,' and jump straight there. The trade: a little extra space and upkeep in exchange for much faster lookups.
 
-<details>
-  <summary>Tables vs. Views</summary>
+In the database world, indexes are created using one or more columns of a table. You never see them directly — they quietly work behind the scenes to speed up your searches and queries.
 
-  A **table** is a physical copy of the data (materialized), while a **view** is a virtual copy — a query that is run on the fly when you access the view. A view is not stored in the database, but the query that defines it is. Views are perfect for giving analysts a simplified, pre-filtered view of complex tables without storing duplicate data.
-</details>
+**Tables vs. Views**
+
+A **table** is a physical copy of the data (materialized), while a **view** is a virtual copy — a query that is run on the fly when you access the view. Think of a view as a *saved search you can reuse by name*, like a smart playlist: the songs (data) aren't duplicated, but the recipe for finding them is saved. A view is not stored in the database, but the query that defines it is. Views are perfect for giving analysts a simplified, pre-filtered view of complex tables without storing duplicate data.
 
 ### 🛠️ Activity 3: The CSV Dump (Code-Along)
 
